@@ -1,0 +1,96 @@
+extends navbar
+
+block content
+  .limiter
+    .container-login100
+      .wrap-login100
+        form.login100-form.validate-form(method = 'post',action='/login/')
+          span.login100-form-title.p-b-43
+            | Login to continue
+          .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+            input.input100(id ='emailbox' type='text' name='email' placeholder='Email addess')
+            span.focus-input100
+            span.label-input100 
+          .wrap-input100.validate-input(data-validate='Password is required')
+            input.input100(id='passcode' type='password' name='password' placeholder='Password')
+            span.focus-input100
+            span.label-input100 
+          p(style=" color: red") #{data}
+          .flex-sb-m.w-full.p-t-3.p-b-32
+            .contact100-form-checkbox
+              input#ckb1.input-checkbox100(type='checkbox' name='remember-me')
+              label.label-checkbox100(for='ckb1')
+                | Remember me
+          .container-login100-form-btn
+            button.login100-form-btn
+              | Login
+        .login100-more(style="background-image: url('/loginv18/images/bg-01.jpg');")
+  // ===============================================================================================
+  script(src='/loginv18/vendor/jquery/jquery-3.2.1.min.js')
+  // ===============================================================================================
+  script(src='/loginv18/vendor/animsition/js/animsition.min.js')
+  // ===============================================================================================
+  script(src='/loginv18/vendor/bootstrap/js/popper.js')
+  script(src='/loginv18/vendor/bootstrap/js/bootstrap.min.js')
+  // ===============================================================================================
+  script(src='/loginv18/vendor/select2/select2.min.js')
+  // ===============================================================================================
+  script(src='/loginv18/vendor/daterangepicker/moment.min.js')
+  script(src='/loginv18/vendor/daterangepicker/daterangepicker.js')
+  // ===============================================================================================
+  script(src='/loginv18/vendor/countdowntime/countdowntime.js')
+  // ===============================================================================================
+  script(src='/loginv18/js/main.js')
+
+    
+  script(type='text/javascript').
+    var check='b';
+    var _email;
+    var _passcode;
+
+    $("#emailbox").keyup(function() {
+    //window.confirm( "email" );
+
+    _email =$(this).val();
+     //alert( "email" );
+    //alert( "Handler for .keyup() called." );
+    });
+
+    $("#passcode").keyup(function() {
+    var pass=$(this).val();
+    //alert( "passcode" );
+    if(pass.length<2){
+    var param1={em:_email};
+    $.get("/searchloge", param1, function(data) {
+      
+      if(data=='e'){
+        alert("Email not found");       
+
+      }
+    
+    });
+    }
+    var param = { em: _email, pass:$(this).val() };
+    
+    if(pass.length>7){
+      
+    //alert( "email" );
+
+    
+    $.get("/searchlog", param, function(data) {
+   
+    if(data=='e'){
+    alert( "Email not found" );
+    }
+    
+    if(data=='ep'){
+    alert( "Email or password is incorrect" );
+    }
+        
+    
+    //alert( "Handler for .keyup() called." );
+    });
+    
+    }
+
+    });

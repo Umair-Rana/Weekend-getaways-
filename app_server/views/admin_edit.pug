@@ -1,0 +1,72 @@
+extends admin
+
+block content
+  style.
+    input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #3CBC8D;
+    color: white;
+    }
+    input[type=password], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #3CBC8D;
+    color: white;
+    }
+    input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    input[type=submit]:hover {
+    background-color: #45a049;
+    }
+    div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    }
+  header#portfolio
+    a(href='#')
+      img.w3-circle.w3-right.w3-margin.w3-hide-large.w3-hover-opacity(src='/images/4.png' style='width:65px;')
+    span.w3-button.w3-hide-large.w3-xxlarge.w3-hover-text-grey(onclick='w3_open()')
+      i.fa.fa-bars
+    .w3-container
+      form(method = 'post',action="/admin/"+ output +"/edit")
+        label(for='fname') First Name
+        br
+        input#fname(type='text' name='firstname' placeholder='Your name..')
+        br
+        label(for='lname') Last Name
+        br
+        input#lname(type='text' name='lastname' placeholder='Your last name..')
+        br
+        label(for='cellnum') Cell Number
+        br
+        input#cellnum(type='text' name='cellnumber'  placeholder='Your cell number... like +9212345678900')
+        br
+        label(for='email') Email
+        br
+        input#email(type='text' name='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$' placeholder='Your email... like example@gmail.com')
+        br
+        label(for='password') Password
+        br
+        input#password(type='password' name='password' pattern='.{6,}' placeholder='Your password..')
+        br
+        input(type='submit' value='Submit')

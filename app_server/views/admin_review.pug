@@ -1,0 +1,60 @@
+extends admin
+
+block content
+  .w3-row-padding
+    .w3-container.w3-center
+      // <img src="7.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      .w3-container.w3-white
+        p
+          b Lorem Ipsum
+        p
+          | Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+      .table100.ver1.m-b-110
+        table(data-vertable='ver1')
+          thead
+            tr.row100.head
+              th.column100.column1(data-column='column1') Author
+              th.column100.column2(data-column='column2') Review
+              th.column100.column3(data-column='column3') Rating
+              th.column100.column4(data-column='column4') Posted On
+              th.column100.column5(data-column='column5') 
+          tbody
+            each review, i in reviews  
+                tr.row100
+                    td.column100.column1(data-column='column1') #{review.author}
+                    td.column100.column2(data-column='column2') #{review.reviewText}
+                    td.column100.column3(data-column='column3') #{review.rating}
+                    td.column100.column4(data-column='column4') #{review.date}
+                    td.column100.column5(data-column='column5')
+                      a.delete#del(href="/admin/"+output+"/reviews/"+review._id,data-id=review._id)(style=" color: red") Delete
+          
+    script.
+      // Script to open and close sidebar
+      function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+      }
+      function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+      }
+    // ===============================================================================================
+    script(src='/admin/vendor/jquery/jquery-3.2.1.min.js')
+    script(type='text/javascript').
+      $(function () {
+        $("#del").click(function (e) {
+          if (confirm("Are you sure u want to delete?")) {
+            console.log('Form is submitting');
+            $("#sampleform").submit();
+          } else {
+            console.log('User clicked no.');
+          }
+        });
+      });
+    // ===============================================================================================
+    script(src='/admin/vendor/bootstrap/js/popper.js')
+    script(src='/admin/vendor/bootstrap/js/bootstrap.min.js')
+    // ===============================================================================================
+    script(src='/admin/vendor/select2/select2.min.js')
+    // ===============================================================================================
+    script(src='/admin/js/main.js')

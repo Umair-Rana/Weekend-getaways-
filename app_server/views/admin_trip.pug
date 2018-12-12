@@ -1,0 +1,75 @@
+extends admin
+
+block content
+  .w3-row-padding
+    .w3-container.w3-center
+      // <img src="7.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      .w3-container.w3-white
+        p
+          b Lorem Ipsum
+        p
+          | Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+      .table100.ver1.m-b-110
+        table(data-vertable='ver1')
+          thead
+            tr.row100.head
+              th.column100.column1(data-column='column1') Location
+              th.column100.column2(data-column='column2') 
+              th.column100.column3(data-column='column3') 
+          tbody
+            each trip, i in trips  
+                tr.row100
+                    td.column100.column1(data-column='column1') #{trip.loc}
+                    td.column100.column2(data-column='column2')
+                        a.delete(href="/admin/"+output+"/tripps/"+trip._id)(style="color: blue") View Details 
+                    td.column100.column3(data-column='column3')
+                        a.delete#del(href="/admin/"+output+"/trippss/"+trip._id)(style="color: red") Delete
+            //tr.row100
+              form.login100-form.validate-form(method = 'post',action="/admin/"+output+"/trippss")
+                td.column100.column1(data-column='column1')
+                    input.input100(type='text' name="loc" placeholder='Location')
+                td.column100.column2(data-column='column2') 
+                    input.input100(type='text' name="Cost" placeholder='Cost')
+                td.column100.column3(data-column='column3') 
+                    input.input100(type='date' name="date" placeholder='Date')
+                td.column100.column4(data-column='column4') 
+                    input.input100(type='time' name="time" placeholder='Time')
+                td.column100.column5(data-column='column5') 
+                    input.input100(type='text' name="details" placeholder='Details')
+                td.column100.column6(data-column='column6')
+                  .container-login100-form-btn
+                    .wrap-login100-form-btn
+                      .login100-form-bgbtn
+                      button.login100-form-btn
+                        | Add
+          
+    script.
+      // Script to open and close sidebar
+      function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+      }
+      function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+      }
+    // ===============================================================================================
+    script(src='/admin/vendor/jquery/jquery-3.2.1.min.js')
+    script(type='text/javascript').
+      $(function () {
+        $("#del").click(function (e) {
+          if (confirm("Are you sure u want to delete?")) {
+            console.log('Form is submitting');
+            $("#sampleform").submit();
+          } else {
+            console.log('User clicked no.');
+          }
+        });
+      });
+    // ===============================================================================================
+    script(src='/admin/vendor/bootstrap/js/popper.js')
+    script(src='/admin/vendor/bootstrap/js/bootstrap.min.js')
+    // ===============================================================================================
+    script(src='/admin/vendor/select2/select2.min.js')
+    // ===============================================================================================
+    script(src='/admin/js/main.js')
