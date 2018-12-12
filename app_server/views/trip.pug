@@ -1,0 +1,253 @@
+doctype html
+title W3.CSS Template
+meta(charset='UTF-8')
+meta(name='viewport' content='width=device-width, initial-scale=1')
+link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway')
+link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+link(href='/css/materialize.css' type='text/css' rel='stylesheet' media='screen,projection')
+// Font Awesome
+link(href='/css/font-awesome.css' rel='stylesheet')
+// Skill Progress Bar
+link(href='/css/pro-bars.css' rel='stylesheet' type='text/css' media='all')
+// Owl Carousel
+link(rel='stylesheet' href='/css/owl.carousel.css')
+// Default Theme CSS File
+link#switcher(href='/css/themes/default-theme.css' type='text/css' rel='stylesheet' media='screen,projection')
+// Main css File
+link(href='/css/style.css' type='text/css' rel='stylesheet' media='screen,projection')
+// Font
+link(href='http://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+style.
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+  body{background-color: #be56f1 }
+  .mySlides {display:none}
+nav
+  .container
+    .nav-wrapper
+      // LOGO
+      // TEXT BASED LOGO
+      // <a href="index.html" class="brand-logo">Weekend Getaways</a>
+      // Image Based Logo
+      // <a href="index.html" class="brand-logo"><img src="img/logo.jpeg" alt="logo img"></a>
+      ul.right.hide-on-med-and-down.custom-nav.menu-scroll
+        //
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonial">Testimonial</a></li>
+          <li><a href="#blog">Blog</a></li>
+        // <a href="index.html" class="brand-logo">Weekend Getaways</a>
+        li(style='background-color:blueviolet')
+          a(href='prac.html') Weekend Getaways
+      // For Mobile View
+      ul#slide-out.side-nav.menu-scroll
+        li
+          a(href='#about') About Me
+        li
+          a(href='#resume') Trips
+        // <li><a href="#portfolio">Portfolio</a></li>
+        // <li><a href="#testimonial">Testimonial</a></li>
+        // <li><a href="#blog">Blog</a></li>
+        li
+          a(href='#footer') Contact
+        li
+          a(href='#footer') Log Out
+      a.button-collapse(href='#' data-activates='slide-out')
+        i.mdi-navigation-menu
+// Sidebar/menu
+nav#mySidebar.w3-sidebar.w3-light-grey.w3-collapse.w3-top(style='z-index:3;width:260px')
+  .w3-container.w3-display-container.w3-padding-16
+    i.fa.fa-remove.w3-hide-large.w3-button.w3-transparent.w3-display-topright(onclick='w3_close()')
+    h3 Rental
+    h3 from $99
+    h6 per night
+    hr
+    form(method = 'post',action='/user/'+userid+'/trip/'+tripid)
+      p
+        label
+          i.fa.fa-male
+          |  Adults
+      input.w3-input.w3-border(type='number' value='1' name='Adults' min='1' max='6')
+      p
+        label
+          i.fa.fa-child
+          |  Kids
+      input.w3-input.w3-border(type='number' value='0' name='Kids' min='0' max='6')
+      p
+        button.w3-button.w3-block.w3-green.w3-left-align(type='submit')  Confirm this Trip
+      p #{message}
+  .w3-bar-block
+    a.w3-bar-item.w3-button.w3-padding-16(href='#apartment')
+      i.fa.fa-building
+      |  Apartment
+    a.w3-bar-item.w3-button.w3-padding-16(href='javascript:void(0)' onclick="document.getElementById('subscribe').style.display='block'")
+      i.fa.fa-rss
+      |  Subscribe
+    // <a href="#contact" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-envelope"></i> Contact</a>
+// Top menu on small screens
+header.w3-bar.w3-top.w3-hide-large.w3-black.w3-xlarge
+  span.w3-bar-item Rental
+  a.w3-right.w3-bar-item.w3-button(href='javascript:void(0)' onclick='w3_open()')
+    i.fa.fa-bars
+// Overlay effect when opening sidebar on small screens
+#myOverlay.w3-overlay.w3-hide-large(onclick='w3_close()' style='cursor:pointer' title='close side menu')
+// !PAGE CONTENT!
+.w3-main.w3-white(style='margin-left:260px')
+  // Push down content on small screens
+  .w3-hide-large(style='margin-top:80px')
+  // Slideshow Header
+  #apartment.w3-container
+    h2.w3-text-green The Apartment
+    .w3-display-container.mySlides
+      img(src='/images2/21.jpg' style='width:100%;margin-bottom:-6px')
+      .w3-display-bottomleft.w3-container.w3-black
+        p Hotel View
+    .w3-display-container.mySlides
+      img(src='/images2/22.jpg' style='width:100%;margin-bottom:-6px')
+      .w3-display-bottomleft.w3-container.w3-black
+        p Kitchen
+    .w3-display-container.mySlides
+      img(src='/images2/23.jpg' style='width:100%;margin-bottom:-6px')
+      .w3-display-bottomleft.w3-container.w3-black
+        p Living Room
+    .w3-display-container.mySlides
+      img(src='/images2/24.jpg' style='width:100%;margin-bottom:-6px')
+      .w3-display-bottomleft.w3-container.w3-black
+        p Living Room II
+  .w3-row-padding.w3-section
+    .w3-col.s3
+      img.demo.w3-opacity.w3-hover-opacity-off(src='/images2/21.jpg' style='width:100%;cursor:pointer' onclick='currentDiv(1)' title='Living room')
+    .w3-col.s3
+      img.demo.w3-opacity.w3-hover-opacity-off(src='/images2/22.jpg' style='width:100%;cursor:pointer' onclick='currentDiv(2)' title='Dining room')
+    .w3-col.s3
+      img.demo.w3-opacity.w3-hover-opacity-off(src='/images2/23.jpg' style='width:100%;cursor:pointer' onclick='currentDiv(3)' title='Bedroom')
+    .w3-col.s3
+      img.demo.w3-opacity.w3-hover-opacity-off(src='/images2/24.jpg' style='width:100%;cursor:pointer' onclick='currentDiv(4)' title='Second Living Room')
+  .w3-container
+    h4
+      strong The space
+    .w3-row.w3-large
+      .w3-col.s6
+        p
+          i.fa.fa-fw.fa-male
+          |  Max people: 4
+        p
+          i.fa.fa-fw.fa-bath
+          |  Bathrooms: 2
+        p
+          i.fa.fa-fw.fa-bed
+          |  Bedrooms: 1
+      .w3-col.s6
+        p
+          i.fa.fa-fw.fa-clock-o
+          |  Check In: After 3PM
+        p
+          i.fa.fa-fw.fa-clock-o
+          |  Check Out: 12PM
+    hr
+    h4
+      strong Amenities
+    .w3-row.w3-large
+      .w3-col.s6
+        p
+          i.fa.fa-fw.fa-shower
+          |  Shower
+        p
+          i.fa.fa-fw.fa-wifi
+          |  WiFi
+        p
+          i.fa.fa-fw.fa-tv
+          |  TV
+      .w3-col.s6
+        p
+          i.fa.fa-fw.fa-cutlery
+          |  Kitchen
+        p
+          i.fa.fa-fw.fa-thermometer
+          |  Heating
+        p
+          i.fa.fa-fw.fa-wheelchair
+          |  Accessible
+    hr
+    h4
+      strong Extra Info
+    p
+      | Our apartment is really clean and we like to keep it that way.Hope you enjoy your stay .
+    p
+      | We accept: 
+      i.fa.fa-credit-card.w3-large
+      i.fa.fa-cc-mastercard.w3-large
+      i.fa.fa-cc-amex.w3-large
+      i.fa.fa-cc-cc-visa.w3-large
+      i.fa.fa-cc-paypal.w3-large
+    hr
+    h4
+      strong Rules
+    p
+      | Person involving in any harrassment case will be given penalty and will taken to the local police immediately. Moreover anyone involving in a fight will be sent back to lahore in a taxi and rents. fares won&apos;t be funded.
+    p Subscribe to receive updates on your selected trips and special offers.
+    p
+      button.w3-button.w3-green.w3-third(onclick="document.getElementById('subscribe').style.display='block'") Subscribe
+  hr
+  // Contact
+  //
+    <div class="w3-container" id="contact">
+    <h2>Contact</h2>
+    <i class="fa fa-map-marker" style="width:30px"></i> Lahore, PK<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +92 310 418 9309 <br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: irtazafayaz@gmail.com<br>
+    <p>Questions? Go ahead, ask them:</p>
+    <form action="/action_page.php" target="_blank">
+    <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+    <button type="submit" class="w3-button w3-green w3-third">Send a Message</button>
+    </form>
+    </div>
+  // <footer class="w3-container w3-padding-16" style="margin-top:32px">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></footer>
+  // End page content
+// Subscribe Modal
+#subscribe.w3-modal
+  .w3-modal-content.w3-animate-zoom.w3-padding-large
+    .w3-container.w3-white.w3-center
+      i.fa.fa-remove.w3-button.w3-xlarge.w3-right.w3-transparent(onclick="document.getElementById('subscribe').style.display='none'")
+      h2.w3-wide SUBSCRIBE
+      p Join our mailing list to receive updates on available dates and special offers.
+      p
+        input.w3-input.w3-border(type='text' placeholder='Enter e-mail')
+      button.w3-button.w3-padding-large.w3-green.w3-margin-bottom(type='button' onclick="document.getElementById('subscribe').style.display='none'") Subscribe
+script.
+  // Script to open and close sidebar when on tablets and phones
+  function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+  }
+  function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+  }
+  // Slideshow Apartment Images
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  function plusDivs(n) {
+  showDivs(slideIndex += n);
+  }
+  function currentDiv(n) {
+  showDivs(slideIndex = n);
+  }
+  function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+  }

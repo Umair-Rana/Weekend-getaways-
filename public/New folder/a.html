@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TrendingTemplates Portfolio | Item : Trips</title>
+
+<!-- Mobile Specific -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- CSS Style -->
+<link rel="stylesheet" href="style1.css"> 
+ 
+<!-- Favicons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+<!-- Used Fonts -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+
+<!-- JavaScript -->
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+
+<script >
+	var theme_list_open=false;
+		$(document).ready(function(){function e(){var e=$("#switcher")
+		.height();$("#iframe")
+		.attr("height",
+		$(window).height()-e+"px")}
+		IS_IPAD=navigator.userAgent.match(/iPad/i)!=null;
+		$(window).resize(function(){e()}).resize();
+			$("#theme_select").click(function(){if(theme_list_open==true){
+			$(".center ul li ul").hide();theme_list_open=false}else{
+			$(".center ul li ul").show();theme_list_open=true}return false});
+			$("#theme_list ul li a").click(function(){var e=$(this).attr("rel").split(",");
+			$("li.purchase a").attr("href",e[1]);
+			$("li.remove_frame a").attr("href",e[0]);
+			$("#iframe").attr("src",e[0]);
+			window.location.href = "?theme="+e[2]+""
+			$("li.close a").attr("src",e[0]);
+			$("#theme_list a#theme_select").text($(this).text());
+			$(".center ul li ul").hide();theme_list_open=false;return false});
+			$("#header-bar").hide();clicked="desktop";var t={desktop:"100%",tabletlandscape:1040,tabletportrait:788,mobilelandscape:500,mobileportrait:340,placebo:0};jQuery(".responsive a").on("click",function(){var e=jQuery(this);for(device in t){console.log(device);console.log(t[device]);if(e.hasClass(device)){clicked=device;jQuery("#iframe").width(t[device]);if(clicked==device){jQuery(".responsive a").removeClass("active");e.addClass("active")}}}return false});if(IS_IPAD){
+			$("#iframe").css("padding-bottom","60px")
+		}}
+	)
+</script>
+
+</head>
+
+<body>
+
+    <div id="switcher">
+		<div class="center">
+				<div class="responsive">
+                    <a href="#" class="desktop active" title="View Desktop Version"></a> 
+                    <a href="#" class="tabletlandscape" title="View Tablet Landscape (1024x768)"></a> 
+                    <a href="#" class="tabletportrait" title="View Tablet Portrait (768x1024)"></a> 
+                    <a href="#" class="mobilelandscape" title="View Mobile Landscape (480x320)"></a>
+                    <a href="#" class="mobileportrait" title="View Mobile Portrait (320x480)"></a>
+                </div>
+                  			
+                <ul>
+                    <li id="theme_list"><a id="theme_select" href="#">
+					Trips</a>
+				<ul>
+				                   <li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/photography/,https://themeforest.net/item/photography-html-marvellous-photography-bootstrap-4/21232920?ref=trendingtemplates,photography">Photography <span style="background:#e85106">HTML5</span></a><img alt="" class="preview" src="product_previews/https://s3.envato.com/files/239469014/preview.__large_preview.jpg"></li><li class="button_a">
+					<a href="#" rel="http://demo.mkthemes.com/homestyle/,https://themeforest.net/item/homestyle-responsive-furniture-interior-wordpress-theme/20689583?ref=trendingtemplates,homestyle-WP">Homestyle-WP <span style="background:#21759B">WordPress</span></a><img alt="" class="preview" src="product_previews/https://s3.envato.com/files/233950617/preview.__large_preview.jpg"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/wp-techmag/,https://themeforest.net/item/techmag-multipurpose-wordpress-news-and-magazine-theme/16165114?ref=trendingtemplates,Techmag-WP">Techmag-WP <span style="background:#21759B">WordPress</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/techmagwp.png"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/wp-learnplus/,https://themeforest.net/item/learnplus-education-lms-responsive-theme-education/16006130?ref=trendingtemplates,LearnPlus-WP">LearnPlus-WP <span style="background:#21759B">WordPress</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/learnplus.png"></li><li class="button_a">
+					<a href="#" rel="http://vergatheme.com/demosd/trips/,https://themeforest.net/item/trips-travel-hotel-booking-wordpress-theme/14960297?ref=trendingtemplates,Trips-WP">Trips-WP <span style="background:#21759B">WordPress</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/trips.jpg"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/homestyle/,http://themeforest.net/item/homestyle-responsive-furniture-interior-html5-site-template/16141456?ref=trendingtemplates,Homestyle">Homestyle <span style="background:#e85106">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/homestyle.png"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/techmag/landing.html,https://themeforest.net/item/techmag-news-and-magazine-bootstrap-template/15522057?ref=trendingtemplates,Techmag">Techmag <span style="background:#e54d26">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/techmagwp.png"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/ova/landing.html,http://themeforest.net/item/ova-multipurpose-html5-responsive-site-template/12619373?ref=trendingtemplates,Ova">Ova <span style="background:#e85106">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/ova.png"></li><li class="button_a">
+					<a href="#" rel="http://demo.themealien.com/racks/,https://themeforest.net/item/racks-wordpress-hosting-whmcs-theme/11588692?ref=trendingtemplates,Racks-WP">Racks-WP <span style="background:#21759a">WordPress</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/rack.png"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/coursat/,https://themeforest.net/item/coursat-responsive-course-html5-site-template-/11755150?ref=trendingtemplates,Coursat">Coursat <span style="background:#e85106">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/coursat.jpg"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/tt-menu/,http://codecanyon.net/user/trendingtemplates/portfolio?ref=trendingtemplates,TT-Menu">TT-Menu <span style="background:#1069ad">jQuery</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/tt-menu.png"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/pedosis/,http://themeforest.net/item/pedosis-construction-responsive-html-template-/11119315?ref=trendingtemplates,Pedosis">Pedosis <span style="background:#e54d26">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/pedosis.png"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/lady/,http://themeforest.net/item/lady-ecommerce-shop-responsive-site-template/11085821?ref=trendingtemplates,Lady">Lady <span style="background:#e54d26">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/lady.jpg"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/trips/,http://themeforest.net/item/trips-travel-hotel-booking-site-html-template/11030465?ref=trendingtemplates,Trips">Trips <span style="background:#e54d26">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/trips.jpg"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/coffee/,http://themeforest.net/item/coffee-responsive-restaurant-cafe-site-template/10947317?ref=trendingtemplates,Coffee">Coffee <span style="background:#e54d26">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/coffee.jpg"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/kerna/,http://themeforest.net/item/kerna-responsive-multipurpose-html-template-/10862391?ref=trendingtemplates,Kerna">Kerna <span style="background:#e54d26">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/kerna.png"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/percorp/,http://themeforest.net/item/percorp-multipurpose-responsive-html-template-/10771134?ref=trendingtemplates,PerCorp">PerCorp <span style="background:#e54d26">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/percorp.jpg"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/buzz/,http://themeforest.net/item/buzz-flat-responsive-onepage-html-site-template/10658160?ref=trendingtemplates,Buzz-HTML">Buzz-HTML <span style="background:#e54d26">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/buzz.png"></li><li class="button_a">
+					<a href="#" rel="http://trendingtemplates.com/demos/lenard/,http://themeforest.net/item/lenard-onepage-business-responsive-site-template/10695308?ref=trendingtemplates,Lenard">Lenard <span style="background:#e54d26">HTML5</span></a><img alt="" class="preview" src="http://trendingtemplates.com/livepreview/screen/lenard.png"></li>                </ul>
+                    </li>	
+                </ul>
+
+
+                <ul class="links">
+
+                 <li class="seotools">
+                    	<a href="https://showwp.com" target="_blank"> Blog </a>
+                    </li>	
+
+                 <li class="createwebsite">
+                    	<a href="https://www.createwebsite.net" target="_blank">Create Website</a>
+                    </li>	
+                    <li class="seotools">
+                    	<a href="https://html.design" target="_blank">FREE HTML Templates</a>
+                    </li>	
+
+                    <li class="purchase" rel="http://themeforest.net/item/trips-travel-hotel-booking-site-html-template/11030465?ref=trendingtemplates">
+                    	<a href="http://themeforest.net/item/trips-travel-hotel-booking-site-html-template/11030465?ref=trendingtemplates"><img src="images/purchase.png" alt="Show WP" /> Purchase</a>
+                    </li>		
+                    <li class="close" rel="http://trendingtemplates.com/demos/trips/">
+                    	<a href="http://trendingtemplates.com/demos/trips/"><img src="images/cross.png" alt="Show WP" /> Remove Frame</a>
+                    </li>		
+                </ul>
+        </div>
+    </div>
+    <iframe id="iframe" src="http://trendingtemplates.com/demos/trips/" frameborder="0" width="100%"></iframe>
+ <!-- Place this tag after the last +1 button tag. -->
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+
+</body>
+</html>
