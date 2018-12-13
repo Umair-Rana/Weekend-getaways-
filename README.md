@@ -35,3 +35,6 @@ Members Contribution:
 	3)Create basic folder and code structure.
 	4)Github and heroku work
 
+==>> HEROKU link:
+		https://damp-savannah-79063.herokuapp.com/
+mlab is not implemented hence you cant login to it.
